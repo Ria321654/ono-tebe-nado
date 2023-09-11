@@ -2,7 +2,7 @@ body {
     font-family: Raleway, sans-serif;
     margin: 0;
     font-weight: 400;
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 
 h1,
@@ -19,12 +19,11 @@ blockquote {
     padding: 0;
 }
 
-
 .content-section {
     box-sizing: border-box;
     width: 100%;
     max-width: 1435px;
-    min-height: 400px;
+    max-height: 760px;
     margin: auto;
 }
 
@@ -40,11 +39,9 @@ blockquote {
 
 .header {
     padding: 92px 49px 92px 51px;
-    
-
 }
 
-.header-infa {
+.header-info {
     color: #000;
     display: flex;
     flex-direction: column;
@@ -54,38 +51,50 @@ blockquote {
 
 .header_menu {
     margin-top: 20px;
-    height: 109px;
     display: grid;
     grid-template-columns: 581px 378px 331px;
     grid-template-rows: 109px;
     column-gap: 20px;
     row-gap: 10px;
 }
-
-.header_menu-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    flex-direction: row;
-    list-style: none;
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    gap: 8px;
+.header_menu-item_active {
     list-style: none;
 }
 
+.header_menu-list {
+    display: grid;
+    grid-template-columns: 78px 155px 174px;
+    /* grid-template-rows: 39px 20px; */
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28px;
+    list-style: circle;
+    gap: 39px;
+}
+
+.header-dot {
+    list-style: circle;
+    stroke-width: 1px;
+    stroke: #000;
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+}
 
 .header_menu-link {
+    list-style: circle;
     color: #000;
     font-family: Raleway;
     font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* font-size: 17px;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
-    text-align: left;
-
+    text-align: left; */
 }
 
 .header_logo {
@@ -98,32 +107,33 @@ blockquote {
     width: 148px;
     height: 105px;
     left: 597px;
-
 }
 
-.header-infa_blok {
+.header-info_blok {
     color: #000;
     font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24.3px; 
+    line-height: 24.3px;
     word-wrap: break-word;
+    color: #000;
 }
 
-.header-infa_list {
+.header-info_list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
 }
 
-
 .header_menu-list {
     margin-top: 40px;
 }
 
-.header-infa-link {
+.header-info-link {
+    font-size: 18px;
+    font-family: Raleway;
     color: #000;
 }
 
@@ -131,28 +141,13 @@ blockquote {
     width: 1440px;
     height: 763.939px;
     position: relative;
-    z-index:0;
-    min-height: 258px;
+    z-index: 0;
+    /* min-height: 258px; */
     background-image: url(../images/lotus-flower\ \(1\).png);
     background-repeat: no-repeat;
-    background-position:  center;
+    background-position: center;
     background-size: auto;
     padding: 162px 50px 62px 50px;
-}
-
-.cover__description {
-    font-family: Raleway;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    padding: 164px 0 0 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 14px;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
 
 .cover_title {
@@ -160,37 +155,28 @@ blockquote {
     position: relative;
     z-index: 2;
     width: 100%;
-    color:  #fff;
+    color: #fff;
     font-family: sans-serif;
     font-weight: 400;
     font-size: 72px;
     line-height: 1;
 }
 
-
-
-.overlay {
-    position: absolute;
-    top: 2px;
-    right: -1px;
-    bottom: -1px;
-    left: 2px;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.60);
-}
-
 .cover__description {
-    display: grid;
-    grid-template-columns: 1034px 236px;
-    grid-template-rows: 59px;
+    margin-left: 284px;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
     position: relative;
     z-index: 2;
-    justify-content: space-around;
 }
 
 .cover__description-text {
     letter-spacing: 3px;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-family: Raleway;
     font-size: 22px;
@@ -198,13 +184,34 @@ blockquote {
     font-weight: 400;
     line-height: 51px;
     text-transform: uppercase;
-    margin-left: 124px;
     letter-spacing: 1px;
-    word-spacing: 20px;
+    word-spacing: 12px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+    position: relative;
+    z-index: 2;
+    margin-top: 144px;
+    display: grid;
+    grid-template-columns: 1082px 280px;
+    grid-template-rows: 59px;
 }
 
 .bet-button {
-    color: #FFF;
+    /* width: 257px;
+    height: 52px; */
+    flex-shrink: 0;
+    color: #fff;
     text-align: center;
     font-family: Raleway;
     font-size: 22px;
@@ -213,54 +220,46 @@ blockquote {
     line-height: normal;
     text-transform: uppercase;
     background-color: transparent;
-    height: 60px;
-    margin-bottom: 3px;
+    border: 1px solid #ffffff;
 }
 
-.img-button {
-    width: 232px;
-    height: 15px;
-    flex-shrink: 0;
-    height: 55px;
-    top: 164px;
-    left: 1101px;
-    border: 0px solid #FFF;
-    position: absolute;
+.text-botton {
+    margin-top: 13px;
 }
 
 .accent-span {
-    font: weight 100;
     font-family: Raleway;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
-    line-height: 115%; 
+    line-height: 115%;
     letter-spacing: 30px;
     text-transform: uppercase;
     display: block;
     text-transform: uppercase;
     gap: 12px;
-    letter-spacing: 17px;
-    
+    letter-spacing: 30px;
 }
 
 .text-center {
     text-align: center;
+    margin-right: 67px;
+    margin-top: 21px;
 }
 
 .text-right {
     text-align: right;
+    margin-right: 5px;
+    margin-top: 3px;
 }
-
 
 .intro {
     padding: 180px 50px 0 50px;
     color: #fff;
 }
 
-
-
 .accent-span-card {
+    margin-left: 40px;
     color: #000;
     font-family: Raleway;
     font-size: 40px;
@@ -281,23 +280,22 @@ blockquote {
 .card-content {
     position: relative;
     display: flex;
-    margin-right: 25px;
+    margin-right: 24px;
+    min-height: 257px;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 30px;
+    align-items: center;
     width: 430px;
-    height: 450px;
-    background-image: url(../images/card-lot-01.jpg)
+    min-height: 450px;
+    background-image: url(../images/card-lot-01.jpg);
+    background-size: 454px;
 }
-
-
 
 .card_title {
     position: relative;
     z-index: 2;
-    padding: 50px 40px 32px 29px;
-    color: #FFF;
+    padding: 50px 40px 30px 29px;
+    color: #fff;
     font-family: Raleway;
     font-size: 22px;
     font-style: normal;
@@ -307,14 +305,14 @@ blockquote {
     text-transform: uppercase;
 }
 
-
 .card_text {
+    margin-bottom: 47px;
     position: relative;
     z-index: 2;
-    padding: 134px 50px 50px 40px;
-    color: #FFF;
+    padding: 173px 40px 4px 40px;
+    color: #fff;
     font-family: Raleway;
-    font-size: 21px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -328,8 +326,9 @@ blockquote {
     justify-content: flex-start;
     align-items: center;
     background-image: url(../images/card-lot-02.jpg);
+    background-size: 454px;
     width: 430px;
-    height: 450px;
+    min-height: 450px;
     flex-shrink: 0;
 }
 
@@ -337,12 +336,12 @@ blockquote {
     position: relative;
     z-index: 2;
     padding: 50px 40px 30px 40px;
-    color: #FFF;
+    color: #fff;
     font-family: Raleway;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; 
+    line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
 }
@@ -350,13 +349,13 @@ blockquote {
 .card_text-two {
     position: relative;
     z-index: 2;
-    padding: 30px 40px 50px 40px;
-    color: #FFF;
+    padding: 5px 40px 45px 40px;
+    color: #fff;
     font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .card-content-three {
@@ -366,21 +365,22 @@ blockquote {
     justify-content: flex-start;
     align-items: center;
     background-image: url(..//images/card-lot-03.jpg);
+    background-size: 454px;
     width: 430px;
-    height: 450px;
+    min-height: 450px;
     flex-shrink: 0;
 }
 
-.card_title-three{
+.card_title-three {
     position: relative;
     z-index: 2;
     padding: 50px 40px 30px 40px;
-    color: #FFF;
+    color: #fff;
     font-family: Raleway;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; 
+    line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
 }
@@ -388,20 +388,20 @@ blockquote {
 .card_text-three {
     position: relative;
     z-index: 2;
-    padding: 76px 40px 50px 40px;
-    color: #FFF;
+    padding: 52px 40px 50px 40px;
+    color: #fff;
     font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .lots__look-more-link {
     margin-left: 40px;
     color: #000;
     font-family: Raleway;
-    font-size: 23px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -414,19 +414,17 @@ blockquote {
     padding: 181px 50px 0 50px;
 }
 
-
 .about__logo {
     display: flex;
     width: 175px;
     height: 240px;
     padding: 0px 95px;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     flex-shrink: 0;
 }
 
 .about__logo2 {
-    position: absolute;
+    position: relative;
     z-index: 1;
     background-color: #000;
     border: none;
@@ -436,21 +434,13 @@ blockquote {
     flex-shrink: 0;
 }
 
-
-
 .about__logo-img {
     margin-left: 44px;
     margin-top: 62px;
-
-}
-
-.about__logo {
-    display: flex;
-    justify-content: flex-start;
 }
 
 .about__title {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     color: #000;
@@ -463,13 +453,12 @@ blockquote {
 }
 
 .about__text {
-    list-style:none;
-    margin-top: 131px;
-    padding: 201px 52px 19px 0px;
-    width: 820px;
+    list-style: none;
+    margin-left: 31px;
+    margin-top: 98px;
+    width: 876px;
     flex-shrink: 0;
-    margin-left: 330px;
-    display: inline-flex;
+    margin-left: 118px;
     height: 100px;
     flex-direction: column;
     justify-content: center;
@@ -479,7 +468,7 @@ blockquote {
 }
 
 .about__text1 {
-    list-style:none;
+    list-style: none;
     color: #000;
     font-family: Raleway;
     font-size: 20px;
@@ -495,33 +484,33 @@ blockquote {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 24px;
 }
 
 .footer {
     display: flex;
     flex-direction: row;
     gap: 250px;
-    width: 1440px;
-    height: 474px;
-    padding: 178px 82px 145px 73px;
+    padding: 180px 50px 90px 50px;
 }
 
-.footer-infa {
+.footer-info {
     color: #000;
     font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24.3px; 
-    list-style:none;
+    line-height: 24.3px;
+    list-style: none;
     margin-top: 180px;
 }
 
-.footer-infa-link {
+.footer-info-link {
     color: #000;
 }
 
 .footer_menu-list {
+    margin-left: 54px;
     margin-top: 180px;
     color: #000;
     text-align: center;
@@ -530,14 +519,37 @@ blockquote {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    list-style:none;    
+    list-style: none;
     white-space: nowrap;
 }
 
+.footer_menu-list-active {
+    list-style: none;
+}
+
 .footer__social-list {
-    width: 240px;
+    width: 45px;
+    display: flex;
     height: 48px;
     flex-shrink: 0;
-    margin-top: 180px;
-    margin-left: 90px;
+    margin-top: 183px;
+    margin-left: 102px;
+}
+
+.footer-yt {
+    color: #000;
+    margin-right: 50px;
+}
+
+.footer-vk {
+    color: #000;
+    margin-right: 50px;
+}
+
+.footer-pinterest {
+    color: #000;
+}
+
+.footer_menu-list-blak {
+    color: #000;
 }
