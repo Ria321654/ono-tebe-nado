@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-        <link rel="stylesheet" href="./styles/style.css" />
         <link rel="stylesheet" href="./fonts/fonts.css" />
         <link rel="stylesheet" href="./styles/global.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
     </head>
 
     <body>
@@ -49,17 +49,15 @@
             <section class="cover content-section content-section_theme_dark">
                 <div class="overlay"></div>
                 <h1 class="cover_title">
-                    <span class="accent-span text-one">оно</span>
-                    <span class="accent-span text-center">тебе</span>
-                    <span class="accent-span text-right">надо</span>
+                    <div class="text-one"> он <span class="accent-span ">о </span></div>
+                    <div class=" text-center">теб<span class="accent-span">е</span></div>
+                    <dv  class="text-right">н<span class="accent-span"> адо</span ></div>
                 </h1>
                 <div class="text">
                     <h2 class="cover__description">
-                        <a class="cover__description-text"> Аукцион вещей, в которые никто не верил</a>
+                        <div class="cover__description-text"> Аукцион вещей, в которые никто не верил</div>
                     </h2>
-                    <div class="bet-button">
-                        <div class="text-botton">Сделать ставку</div>
-                    </div>
+                    <button type="button" class="bet-button">Сделать ставку</button>
                 </div>
             </section>
             <section class="intro content-section content-section_theme_wite">
@@ -68,20 +66,22 @@
                 </h2>
                 <ul class="card-list">
                     <li class="card">
-                        <article class="card-content">
+                        <article>
+                            <a class="card-content card-content-one ">
                             <div class="overlay"></div>
-                            <h4 class="card_title">Фильм режиссёра, который бросил киношколу</h4>
+                            <h3 class="card_title">Фильм режиссёра, который бросил киношколу</h3>
                             <div class="card_text">
                                 <p>
                                     Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
                                 </p>
                             </div>
+                            </a>
                         </article>
                     </li>
                     <li>
-                        <article class="card-content-two">
+                        <article class=" card-content card-content-two">
                             <div class="overlay"></div>
-                            <h4 class="card_title-two">Книга, где описан один скучный день из жизни рекламного агента</h4>
+                            <h3 class="card_title-two">Книга, где описан один скучный день из жизни рекламного агента</h3>
                             <div class="card_text-two">
                                 <p>
                                     Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И
@@ -91,9 +91,9 @@
                         </article>
                     </li>
                     <li>
-                        <article class="card-content-three">
+                        <article class="card-content card-content-three">
                             <div class="overlay"></div>
-                            <h4 class="card_title-three">Картина, которую повторит даже 5-летний сын маминой подруги</h4>
+                            <h3 class="card_title-three">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
                             <div class="card_text-three">
                                 <p>
                                     Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали, что это — одна из
@@ -159,11 +159,11 @@
                     </li>
                 </ul>
             </nav>
-            <a class="footer__social-list">
-                <img class="footer-yt" src="./images/yt.svg" alt="ютуб" />
-                <img class="footer-vk" src="./images/vk.svg" alt="вк" />
-                <img class="footer-pinterest" src="./images/pinterest.svg" alt="пинтерест" />
-            </a>
+            <ul class="footer__social-icon">
+                <img class="footer-yt footer__social-list" src="./images/yt.svg" alt="ютуб" href="#0" />
+                <img class="footer-vk footer__social-list" src="./images/vk.svg" alt="вк" href="#0"/>
+                <img class="footer-pinterest footer__social-list" src="./images/pinterest.svg" alt="пинтерест" href="#0" />
+            </ul>
         </footer>
     </body>
 </html>
