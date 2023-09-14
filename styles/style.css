@@ -62,7 +62,7 @@ blockquote {
 
 .header_menu-list {
     display: grid;
-    grid-template-columns: 106px 187px 144px;
+    grid-template-columns: 100px 180px 116px;
     font-family: "Raleway", sans-serif;
     font-size: 28px;
     font-weight: 400;
